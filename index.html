@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/50ed43cee8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>R-P-S</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="chose-form">
+            <h2>How many rounds do you want play?</h2>
+            <div id="round-selector">
+                <input type="radio" id="round-5" name="round" value="5">
+                <label for="5">5</label>
+                <input type="radio" id="round-10" name="round" value="10">
+                <label for="10">10</label>
+                <br>
+                <br>
+                <input type="radio" id="round-15" name="round" value="15">
+                <label for="15">15</label>
+                <input type="radio" id="round-20" name="round" value="20">
+                <label for="20">20</label><br>
+                <div class="button-selector">
+                    <input type="button" value="Let's Play!!" onclick="roundSelector()">
+                </div>
+            </div>
+            <div id="round-counter">
+                <h2 id="round-counter-display"></h2>
+            </div>
+        </div>
+        <article id="play-ground">
+            <fieldset>
+                <legend>Score Board</legend>
+                <div id="score-board">
+                    <div class="tag you">YOU</div>
+                    <div id="score-display"></div>
+                    <div class="tag cpu">CPU</div>
+                </div>
+            </fieldset>
+
+            <p id="result-display"></p>
+
+            <div id="player">
+                <div id="rock">
+                    <i class="far fa-hand-rock"></i>
+                </div>
+                <div id="paper">
+                    <i class="far fa-hand-paper"></i>
+                </div>
+                <div id="scissors">
+                    <i class="far fa-hand-scissors"></i>
+                </div>
+            </div>
+            <h2>Which one do you chose?</h2>
+            <a href="#">
+                <h4 id="restart"> RESTART</h4>
+            </a>
+        </article>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
