@@ -58,6 +58,18 @@ function calculate(user, cpu) {
     if (userCall == cpuCall) {
         document.getElementById("result-display").innerHTML = "This round is draw, YOU and CPU both pick: " + cpuCall;
         document.getElementById("round-counter-display").innerText = i + " / " + roundSelected;
+        var obj = document.getElementById(`${userCall}`);
+        var orignalBoxShadow = obj.style.boxShadow;
+        var originalBorder = obj.style.border;
+        var originalColor = obj.style.color;
+        obj.style.boxShadow = "0px 0px 40px rgba(255, 255, 255, 0.8)";
+        obj.style.border = "3px solid white";
+        obj.style.color = "white";
+        setTimeout(function () {
+            obj.style.boxShadow = originalColor;
+            obj.style.border = originalBorder;
+            obj.style.color = originalColor;
+        }, 1000);
     } else if ((userCall == "rock" && cpuCall == "scissors") || (userCall == "scissors" && cpuCall == "paper") || (userCall == "paper" && cpuCall == "rock")) {
         document.getElementById("result-display").innerHTML = "You won this round, you pick: " + userCall + " and CPU pick: " + cpuCall;
         document.getElementById("round-counter-display").innerText = i + " / " + roundSelected;
